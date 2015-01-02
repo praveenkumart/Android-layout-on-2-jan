@@ -3,102 +3,134 @@
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cloudy"
+    android:background="#D7D7D7"
     android:orientation="vertical"
-    android:padding="12dp"
-    tools:context="com.imrokraft.myfirstapp.MainActivity" 
-    android:weightSum="5.0">
+    android:weightSum="7.0"
+    tools:context="com.imrokraft.myfirstapp.MainActivity" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.5"
-        android:layout_marginBottom="5dp"
-         >
+        android:layout_weight="3.0"
+        android:background="#3E3E3E" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mic" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="68dp"
-            android:text="And yes, it&apos;s totally free."
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="Recording . . ."
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:paddingTop="5dp"
+            android:text="0:00:03"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="145dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:text="Create account" 
-            android:background="#ffffff"
-            android:layout_marginRight="5dp"/>
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_toRightOf="@+id/button1"
-            android:text="Sign in" 
-            android:background="#ffffff"
-            android:layout_marginLeft="3dp"/>
-
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:background="#EAEAEA"
+            android:text="Stop" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="#F85530" 
-        android:layout_marginBottom="5dp">
+        android:layout_weight="2.0" >
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:background="#F85530"
-            android:text="Sign in with Google"
-            android:textColor="#ffffff" />
-
-        <ImageView
-            android:id="@+id/imageView1"
+        <EditText
+            android:id="@+id/editText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/googlep" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:background="#ffffff"
+            android:ems="10"
+            android:hint="Add some text . . ."
+            android:inputType="textMultiLine"
+            android:padding="6dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp" >
 
+            <requestFocus />
+        </EditText>
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp" 
-        android:layout_weight="0.5"
-        android:background="#316CE6">
+        android:layout_height="0dp"
+        android:layout_weight="2.0" >
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/fb" />
-
-        <Button
-            android:id="@+id/button4"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@+id/imageView2"
-            android:text="Sign in with Facebook" 
-            android:background="#316CE6"/>
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="51dp"
+            android:paddingBottom="6dp"
+            android:text="Tap to add location"
+            android:textSize="20sp" />
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/point" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_above="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#cacaca" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_alignLeft="@+id/imageView2"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/imageView2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#cacaca" />
     </RelativeLayout>
 
 </LinearLayout>
